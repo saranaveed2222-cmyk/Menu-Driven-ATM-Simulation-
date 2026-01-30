@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+int main() {
+int choice;
+    float balance = 10000, amount;
+    cout <<"ATM Menu" <<endl;
+    cout <<"1, Check Balance" <<endl;
+    cout <<"2, Deposit Amount" <<endl;
+    cout <<"3, Withdraw Amount" <<endl;
+    cout <<"4, Exit" <<endl;
+    
+    cout<<"Enter your choice:";
+    cin>>choice;
+    
+    
+    switch(choice) {
+        case 1:
+        cout <<"Your balance is:"<<balance;
+        break;
+        
+        case 2:
+        cout <<"Enter deposit amount:";
+        cin >>amount;
+        balance+=amount;
+        cout <<"Updated balance:"<<balance;
+        break;
+        
+        case 3:
+        cout <<"Enter Withdrawl amount:";
+        cin>>amount;
+        if(amount<=balance) {
+            balance-=amount;
+            cout <<"Remaining balance:"<<balance;
+        }else {
+            cout <<"Insufficient balance!";
+        }
+        break;
+        
+        case 4:
+        cout <<"Log out:";
+        break;
+        
+        default:
+        cout<<"Invalid choice!";
+        
+    }        
+            
+            
+    return 0;
+}
